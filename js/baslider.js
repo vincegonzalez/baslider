@@ -89,7 +89,6 @@
                     var posP = (posX / sliderWidth)*100;
 
                     posX = Math.floor(Math.min(Math.max(0, posP), 100));
-                    console.log(posX)
                     
                     baBar.css({
                         left: percNum(posX)
