@@ -1,3 +1,5 @@
+'use strict';
+
 (function($){
     $.fn.extend({
         beforeAfter: function() {
@@ -7,8 +9,8 @@
                 var baContainer = $(this);
 				var percentage = 50;
                 var afterImage = $('img:last', baContainer);
-                afterImageH = afterImage.height();
-                afterImageW = afterImage.width();
+                var afterImageH = afterImage.height();
+                var afterImageW = afterImage.width();
 
                 $(baContainer).height(afterImageH);
 
@@ -16,7 +18,7 @@
                 $('.ba-slider-before-image', baContainer).css({width: percNum(percentage)})
                 $('img', baContainer).addClass('ba-slider-image');
 
-                html = '<div class="ba-control"><div class="ba-control-area"><div class="ba-control-bar"><span class="ba-left-arrow" /><span class="ba-control-handle" /><span class="ba-right-arrow" /></div></div></div>';
+                var html = '<div class="ba-control"><div class="ba-control-area"><div class="ba-control-bar"><span class="ba-left-arrow" /><span class="ba-control-handle" /><span class="ba-right-arrow" /></div></div></div>';
 
                 baContainer.append(html);
  
@@ -56,7 +58,7 @@
                     var clickX = e.pageX - $(this).offset().left;
                     var posP = (clickX / slider.width())*100;
 
-                    posX = Math.round(Math.min(Math.max(0, posP), 100));
+                    var posX = Math.round(Math.min(Math.max(0, posP), 100));
 
                     baBar.stop().animate({
                         left: percNum(posX)
@@ -74,7 +76,7 @@
                 	var clickX = touchX - slider.offset().left;
                 	var posP = (clickX / slider.width())*100;
 
-                    posX = Math.round(Math.min(Math.max(0, posP), 100));
+                    var posX = Math.round(Math.min(Math.max(0, posP), 100));
 
 					baBar.css({
                         left: percNum(posX)
