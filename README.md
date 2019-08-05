@@ -2,10 +2,6 @@
 
 This is my attempt at creating a before after slider that is both responsive and mobile-friendly.
 
-## Demo
-
-Download this repo or you can view it on [http://mynameisvince.com/baslider/](http://mynameisvince.com/baslider/)
-
 ## Instructions
 
 1.  Include 'baslider.js' on your page. 
